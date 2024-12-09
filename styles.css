@@ -11,7 +11,6 @@ body {
     color: #333;
 }
 
-/* Skip Navigation */
 .skip-nav {
     position: absolute;
     top: -40px;
@@ -28,7 +27,6 @@ body {
     top: 10px;
 }
 
-/* Header & Navigation Styling */
 .header {
     background-color: #004080;
     color: #ffffff;
@@ -64,7 +62,6 @@ body {
     background: #004080;
 }
 
-/* Main Section & How Section Visibility */
 main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -81,7 +78,6 @@ section {
     background: #f4f4f4;
 }
 
-/* How Section Visibility & Focus Fixes */
 .how-section {
     padding: 20px;
     background: #e6f7ff;
@@ -94,7 +90,6 @@ section {
     padding-left: 20px;
 }
 
-/* Hero Section for Alignment */
 .image-placeholder {
     height: 200px;
     background: #cccccc;
@@ -107,7 +102,6 @@ section {
     border-radius: 5px;
 }
 
-/* Footer */
 footer {
     background-color: #004080;
     color: #ffffff;
@@ -116,12 +110,10 @@ footer {
     margin-top: 30px;
 }
 
-/* Accessibility */
 :focus {
     outline: 3px solid #ffd700;
 }
 
-/* Responsive Grid Adjustments */
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
