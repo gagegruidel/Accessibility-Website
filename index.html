@@ -3,35 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Universal Design</title>
+    <title>Universal Design Project</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="top-nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="what.html">What</a></li>
-            <li><a href="how.html">How</a></li>
-            <li><a href="achieve.html">Achieve</a></li>
-            <li><a href="examples.html">Examples</a></li>
-            <li><a href="promote.html">Promote</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section class="hero">
-            <h1>Welcome to Universal Design</h1>
-            <p>Making accessibility and inclusivity a priority for all. Learn about Universal Design and how it can transform lives.</p>
-            <a href="#details" class="cta-button">Learn More</a>
+    <a href="#main-content" class="skip-nav">Skip to Main Content</a>
+    <header class="header" role="banner">
+        <h1>Gage Gruidel Universal Design Project</h1>
+        <nav class="top-nav">
+            <h2 class="sr-only">Home Nav</h2>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="why.html">Why</a></li>
+                <li><a href="what.html">What</a></li>
+                <li><a href="how.html">How</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main role="main" id="main-content">
+        <section>
+            <h2>Welcome to Universal Design</h2>
+            <p>Our mission is to foster inclusivity and ensure equal experiences through design. Learn how Universal Design principles empower inclusivity on the Internet.</p>
+            <img src="/home_1.png" alt="Disabled Community Image of people walking">
         </section>
-        <section id="details">
-            <h2>What is Accessibility?</h2>
-            <p>Accessibility ensures everyone, including those with disabilities, can use digital and physical spaces effectively and independently. Accessiblity allows for all groups no matter disability or empairment to use digital spaces and physical spaces independently. For this site we will focus on the digital.</p>
+        
+        <section>
             <h2>What is Universal Design?</h2>
-            <p>Universal Design goes beyond accessibility. It’s a design philosophy that makes products, environments, and experiences usable by all people, without adaptation or specialized solutions. To be inclusive for everyone or in other words Universal.</p>
+            <p>Universal Design creates accessible spaces, environments, and web tools that allow all users with disabilities and impairments access without adaptation of their own processes.</p>
+            <img src="/home_2.avif" alt="The 7 Principles of Universal Design Icon title image to represent UD">
         </section>
+        
+        <section>
+            <h2>Why Universal Design?</h2>
+            <p>Ethics, market opportunities, and legal compliance drive the need for Universal Design. It removes barriers and ensures equal access for all demographics. Allowing for a world that is seamless for all users especially on the world wide web.</p>
+            <img src="/home_3.gif" alt="Universal Design gif">
+        </section>
+
+        <section>
+            <h2>How Universal Design is Implemented</h2>
+            <p>Universal Design is implemented through strategies, planning, and design choices that prioritize accessibility and inclusivity from the beginning. These strategies address diverse user needs by adhering to accessibility principles, responsive design, and usability testing.</p>
+            <ul>
+                <li><strong>Semantic HTML & ARIA Roles:</strong> Developers use proper HTML semantics and ARIA roles to ensure compatibility with assistive devices like screen readers and keyboard navigation.</li>
+                <li><strong>Responsive Design:</strong> Designers employ mobile-first principles and media queries to make digital spaces accessible across devices of varying sizes and capabilities.</li>
+                <li><strong>Usability Testing:</strong> Designers test their work with diverse user groups to identify and attempt to fix barriers early in the design cycle.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Key Methods for Accessibility</h2>
+            <p>Accessibility relies on a mix of design principles, evaluation, and testing. These key methods ensure that users of all abilities have an equal opportunity to interact with content:</p>
+            <ul>
+                <li><strong>Contrast and Visual Standards:</strong> Design choices ensure high-contrast text and user interfaces to improve visibility for users with low vision or color blindness.</li>
+                <li><strong>Keyboard Navigation:</strong> Ensuring interfaces are fully functional via keyboard navigation allows users with motor impairments to access sites in their entirety.</li>
+                <li><strong>Feedback Mechanisms:</strong> Clear, real-time feedback ensures that users understand their actions.</li>
+                <li><strong>Evaluation Tools:</strong> Tools such as WAVE and Lighthouse are employed to identify potential accessibility barriers on curent sites.</li>
+            </ul>
+        </section>
+
     </main>
+    
     <footer>
-        <p>Universal Design | Designed for Everyone</p>
+        <p>&copy; 2024 Gage Gruidel Universal Design Project</p>
     </footer>
 </body>
 </html>

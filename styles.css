@@ -7,134 +7,164 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #F9F9F9;
-    color: #333333;
+    background-color: #ffffff;
+    color: #333;
 }
 
-.top-nav {
-    background-color: #1C2833;
-    color: white;
-    padding: 15px 20px;
-    position: sticky;
-    top: 0;
+/* Skip Navigation */
+.skip-nav {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #ffd700;
+    color: #000;
+    padding: 10px;
     z-index: 1000;
-    width: 100%;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.skip-nav:focus {
+    top: 10px;
+}
+
+/* Header & Navigation Styling */
+.header {
+    background-color: #004080;
+    color: #ffffff;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 2px solid #007acc;
 }
 
 .top-nav ul {
     list-style: none;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    background: #007acc;
+    border-bottom: 3px solid #004080;
+}
+
+.top-nav ul li {
+    margin: 0;
 }
 
 .top-nav ul li a {
-    color: white;
     text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: color 0.3s ease;
-}
-
-.top-nav ul li a:hover {
-    color: #28B463;
-}
-
-.hero {
-    background-color: #2E86AB;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-}
-
-.hero p {
-    margin: 10px 0 20px;
-    font-size: 1.2rem;
-}
-
-.hero .cta-button {
-    background-color: #28B463;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
+    color: #ffffff;
+    padding: 8px 15px;
     border-radius: 5px;
-    font-weight: bold;
     transition: background-color 0.3s ease;
 }
 
-.hero .cta-button:hover {
-    background-color: #1C2833;
+.top-nav ul li a:hover,
+.top-nav ul li a:focus {
+    background: #004080;
 }
 
+/* Main Section & How Section Visibility */
 main {
-    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 section {
-    margin-bottom: 20px;
     padding: 20px;
-    background: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #f4f4f4;
 }
 
-h2 {
-    margin-bottom: 10px;
-    font-size: 1.8rem;
-    color: #2E86AB;
+/* How Section Visibility & Focus Fixes */
+.how-section {
+    padding: 20px;
+    background: #e6f7ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-p {
-    font-size: 1rem;
-    margin-bottom: 10px;
+.how-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
+/* Hero Section for Alignment */
+.image-placeholder {
+    height: 200px;
+    background: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #666;
+    color: #555;
+    font-size: 1.1rem;
+    border-radius: 5px;
+}
+
+/* Footer */
 footer {
-    background-color: #1C2833;
-    color: white;
+    background-color: #004080;
+    color: #ffffff;
     text-align: center;
-    padding: 10px 20px;
-    margin-top: 20px;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+/* Accessibility */
+:focus {
+    outline: 3px solid #ffd700;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .image-placeholder {
+        height: 150px;
+    }
+
+    .how-section ul {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.6rem;
+    }
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .cta-button {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-    }
-
-    section {
-        padding: 15px;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-
-    .top-nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .top-nav ul li {
-        margin: 5px 0;
+    section img {
+        width: 100%;
+        border-radius: 5px;
     }
 }
